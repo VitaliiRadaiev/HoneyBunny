@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:wght@400;600;700;800&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+	<div class="_preload-body"></div>
+	<!-- == TOP LINE ================== -->
+	<!-- @@includ e('common/header/_header.html',{}) -->
+	<!-- == // TOP LINE ================== -->
+
+
+	<main class="_page home-page _padding-top">
+
+		<section class="promo-header">
+			<div class="promo-header__bg ibg">
+				<picture>
+    <source srcset="img/photo/promo-header-desk.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/promo-header-mob.jpg" alt="img">
+</picture>
+			</div>
+			<div class="promo-header__body container">
+				<div class="promo-header__suptitle">Начни карьеру</div>
+				<h1 class="promo-header__title">
+					в модном <br> клубе
+				</h1>
+				<div class="promo-header__text">и зарабатывай от <span>100 000 ₽</span></div>
+			</div>
+		</section>
+		<div class="btn-wrap">
+			<a href="#" class="btn" data-da=".promo-header__body,768,last">Начать карьеру</a>
+		</div>
+
+		<div class="ticker swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					Стань независимой, самодостаточной, счастливой
+				</div>
+				<div class="swiper-slide">
+					Стань независимой, самодостаточной, счастливой
+				</div>
+				<div class="swiper-slide">
+					Стань независимой, самодостаточной, счастливой
+				</div>
+			</div>
+		</div>
+
+		<section class="intro">
+			<div class="intro__row-1">
+				<div class="container-xs">
+					<div>
+						<h3 class="intro__title-1 title-3">
+							Яркая <br> и статусная жизнь
+						</h3>
+						<div class="intro__subtitle subtitle">
+							не только в сериалах и социальных сетях звезд
+						</div>
+						<h3 class="intro__title-2 title-3">
+							она доступна действительно каждому человеку.
+						</h3>
+					</div>
+				</div>
+			</div>
+			<div class="intro__row-2">
+				<div class="container-xs">
+					<div class="intro__img-label" data-da=".intro__row-2-bottom,768,first">
+						и особенно...
+						<strong>
+							ТЕБЕ
+						</strong>
+					</div>
+				</div>
+				<div class="container">
+					<div class="intro__img ibg">
+						<picture>
+    <source srcset="img/photo/intro-img-desk.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/intro-img-mob.jpg" alt="img">
+</picture>
+					</div>
+				</div>
+				<div class="intro__row-2-bottom container-xs">
+					<div class="box">
+						<div class="box__bg ibg">
+							<picture>
+    <source srcset="img/photo/box-img-desk.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/box-img-mob.jpg" alt="img">
+</picture>
+						</div>
+						<ul class="box__list">
+							<li>
+								Путешествия в самые желанные места мира
+							</li>
+							<li>
+								Ужины в лучших ресторанах
+							</li>
+							<li>
+								Одежда от именитых брендов
+							</li>
+							<li>
+								А также крутая машина и личное жилье
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="intro__arrow">
+					<span>дальше больше</span>
+					<img src="img/icons/arrow-down.svg" alt="">
+				</div>
+			</div>
+			<div class="intro__row-3">
+				<div class="container-xs">
+					<div class="intro__text text-content">
+						<p>
+							Всего этого можно достичь и прожить свою лучшую жизнь.
+						</p>
+						<p>
+							С такими возможностями ты станешь уверенной в себе и самодостаточной девушкой, которая
+							вызывает восхищение со стороны окружающих
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="lower-works">
+			<div class="lower-works__bg-wrap">
+				<div class="lower-works__bg ibg">
+					<picture>
+    <source srcset="img/photo/lower-works-bg-desk.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/lower-works-bg-mob.jpg" alt="img">
+</picture>
+				</div>
+				<div class="lower-works__row-1">
+					<div class="container-xs">
+						<h2 class="lower-works__title title-2">
+							ДЛЯ ЭТОГО <br> НУЖЕН
+						</h2>
+						<div class="lower-works__subtitle subtitle">
+							ВЫСОКИЙ ДОХОД
+						</div>
+						<div class="lower-works__text text-content">
+							Достичь такого уровня жизни можно разными путями.
+						</div>
+						<div class="lower-works__label">например:</div>
+					</div>
+				</div>
+				<div class="lower-works__row-2">
+					<div class="container">
+						<ul class="lower-works__list">
+							<li>
+								<div class="work-card">
+									<div class="work-card__img ibg">
+										<img src="img/photo/work-card-img-1.jpg" alt="">
+									</div>
+									<div class="work-card__wrap">
+										<div class="work-card__title">
+											Продавец-консультант
+										</div>
+										<hr>
+										<div class="work-card__info">
+											<p>Средний заработок:</p>
+											<p>30 000 ₽</p>
+										</div>
+										<div class="work-card__text">
+											<p>
+												<strong>20 лет</strong> упорного труда в сфере обслуживания и постоянные
+												кредиты
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="work-card">
+									<div class="work-card__img ibg">
+										<img src="img/photo/work-card-img-2.jpg" alt="">
+									</div>
+									<div class="work-card__wrap">
+										<div class="work-card__title">
+											Официант
+										</div>
+										<hr>
+										<div class="work-card__info">
+											<p>Средний заработок:</p>
+											<p>40 000 ₽</p>
+										</div>
+										<div class="work-card__text">
+											<p>
+												<strong>15 лет</strong> с разной и зачастую не самой приятной
+												аудиторией, малое количество выходных и большая нагрузка в праздничные
+												дни
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="work-card">
+									<div class="work-card__img ibg">
+										<img src="img/photo/work-card-img-3.jpg" alt="">
+									</div>
+									<div class="work-card__wrap">
+										<div class="work-card__title">
+											Администратор
+										</div>
+										<hr>
+										<div class="work-card__info">
+											<p>Средний заработок:</p>
+											<p>45 000 ₽</p>
+										</div>
+										<div class="work-card__text">
+											<p>
+												<strong>20 лет</strong> скучной и рутинной работы, которая забирает
+												огромное количество личного времени, а также приводит к стагнации и
+												эмоциональному выгоранию.
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="work-card">
+									<div class="work-card__img ibg">
+										<img src="img/photo/work-card-img-4.jpg" alt="">
+									</div>
+									<div class="work-card__wrap">
+										<div class="work-card__title">
+											Работа по специальности
+										</div>
+										<hr>
+										<div class="work-card__text">
+											<p>Минимум <strong>4 года</strong> учебы в ВУЗе</p>
+											<p>
+												<strong>Полумиллионные</strong> затраты на обучение без гарантии
+												дальнейшего трудоустройства
+											</p>
+											<p>
+												Работа на начальных должностях с возможным карьерным ростом только
+												<strong>к 30 годам</strong> и практически полное отсутствие времени на
+												личную жизнь и построение семьи.
+											</p>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="lower-works__row-3">
+					<div class="container-sm">
+						<div class="lower-works__bottom">
+							<div>
+								Но...
+							</div>
+							<div>
+								Есть другой <span>путь</span>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="lower-works__bottom-img">
+				<img src="img/photo/lower-works-bottom.svg" alt="">
+			</div>
+		</section>
+
+		<section class="cta">
+			<div class="container cta__row-1">
+				<div class="cta__img ibg">
+					<picture>
+    <source srcset="img/photo/cta-img-desk.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/cta-img-mob.jpg" alt="img">
+</picture>
+				</div>
+			</div>
+			<div class="container-xs cta__row-2">
+				<h2 class="cta__title title-1">
+					<strong>Стань</strong>
+					<strong>Хостес</strong>
+				</h2>
+				<div class="cta__subtitle subtitle">
+					премиального <br> шоу-бара
+				</div>
+				<div class="cta__text text-content">
+					Твой первый и важный шаг к построению успешного будущего!
+				</div>
+				<div class="cta__btn-wrap">
+					<a href="#" class="btn">Стать хостес</a>
+				</div>
+			</div>
+		</section>
+
+		<div class="ticker swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					что ты получишь? что ты получишь?
+				</div>
+				<div class="swiper-slide">
+					что ты получишь? что ты получишь?
+				</div>
+				<div class="swiper-slide">
+					что ты получишь? что ты получишь?
+				</div>
+			</div>
+		</div>
+
+		<section class="advantages">
+			<div class="container-sm">
+				<ul class="advantages__list">
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Высокий</strong>
+									<strong>заработок</strong>
+									<div class="advantages-card__num">01.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-1.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Твой стабильный <br> ежемесячный доход:
+								</div>
+								<div class="advantages-card__bottom">
+									<p>от <span>100 000</span> ₽</p>
+									<p>без потолка зарплат</p>
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-1.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Гибкий</strong>
+									<strong>график</strong>
+									<div class="advantages-card__num">02.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-2.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Имей возможность заниматься любимыми хобби
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-2.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Без</strong>
+									<strong>опыта</strong>
+									<div class="advantages-card__num">03.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-3.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Тебя научат всему необходимому для успешного старта карьеры
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-3.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Внешние</strong>
+									<strong>данные</strong>
+									<div class="advantages-card__num">04.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-4.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Cтилист подберет тебе самые модные и эффектные луки, а визажист доведет твою
+									внешность до идеала
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-4.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Личностный</strong>
+									<strong>рост</strong>
+									<div class="advantages-card__num">05.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-5.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Cтань независимой, счастливой и еще более уверенной в себе
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-5.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Тренировки</strong>
+									<strong>с хореографом</strong>
+									<div class="advantages-card__num">06.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-6.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Прокачай свою пластику и хореографию, а также участвуй в постановке крутых шоу
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-6.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Яркие и крутые</strong>
+									<strong>тусовки</strong>
+									<div class="advantages-card__num">07.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-7.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Будь частью самых модных и шумных событий твоего города
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-7.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Взаимодействие</strong>
+									<strong>с медийными</strong>
+									<strong>лицами</strong>
+									<div class="advantages-card__num">08.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-8.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Общайся в процессе работы с самыми успешными и популярными людьми страны
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-8.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Корпоративное</strong>
+									<strong>жилье</strong>
+									<div class="advantages-card__num">09.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-9.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Начни самостоятельную жизнь в комфортабельной квартире в самом центре города
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-9.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="advantages-card">
+							<div class="advantages-card__col-1">
+								<h4 class="advantages-card__title">
+									<strong>Карьерный</strong>
+									<strong>рост</strong>
+									<div class="advantages-card__num">10.</div>
+								</h4>
+								<div class="advantages-card__img-mob ibg">
+									<img src="img/photo/advantages-card-img-10.jpg" alt="">
+								</div>
+								<div class="advantages-card__text text-content">
+									Развивайся в компании с возможностью выхода на абсолютно новый уровень дохода
+								</div>
+							</div>
+							<div class="advantages-card__col-2">
+								<div class="advantages-card__img-desk ibg">
+									<img src="img/photo/advantages-card-img-10.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="work-whith-us">
+			<div class="work-whith-us__body container-sm">
+				<div class="work-whith-us__head">
+					<h2 class="work-whith-us__title title-2">
+						Работая в <br> Honey Bunny
+					</h2>
+					<div class="work-whith-us__subtitle subtitle">
+						ты не будешь <br> работать ни дня,
+					</div>
+				</div>
+				<div class="work-whith-us__slider">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<picture>
+    <source srcset="img/photo/work-whith-us-img-desk-1.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/work-whith-us-img-mob-1.jpg" alt="img">
+</picture>
+								<div class="top">
+									так как <br> каждая твоя смена - это...
+								</div>
+								<div class="bottom">
+									грандиозное
+									<strong>событие</strong>
+								</div>
+							</div>
+							<div class="swiper-slide ibg">
+								<picture>
+    <source srcset="img/photo/work-whith-us-img-desk-2.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/work-whith-us-img-mob-2.jpg" alt="img">
+</picture>
+								<div class="top">
+									так как <br> каждая твоя смена - это...
+								</div>
+								<div class="bottom">
+									незабываемая
+									<strong>вечеринка</strong>
+								</div>
+							</div>
+							<div class="swiper-slide ibg">
+								<picture>
+    <source srcset="img/photo/work-whith-us-img-desk-3.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/work-whith-us-img-mob-3.jpg" alt="img">
+</picture>
+								<div class="top">
+									так как <br> каждая твоя смена - это...
+								</div>
+								<div class="bottom">
+									настоящий
+									<strong>праздник</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-wrap">
+					<a href="#" class="btn" data-da=".work-whith-us__head,992,last">Стать хостес</a>
+				</div>
+			</div>
+		</section>
+
+		<section class="about">
+			<div class="about__head container">
+				<div class="about__bg ibg">
+					<picture>
+    <source srcset="img/photo/about-bg-desk.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/about-bg-mob.jpg" alt="img">
+</picture>
+				</div>
+				<div class="about__title-wrap">
+					<h2 class="about__title title-1">
+						о <br> Honey <br> Bunny
+					</h2>
+				</div>
+			</div>
+			<div class="about__body container-xs">
+				<ul class="about__list text-content">
+					<li>
+						<h4>Honey Bunny -</h4>
+						<p>сеть премиум шоу-баров</p>
+					</li>
+					<li class="left">
+						<h5>Премиальный уровень заведения</h5>
+						<p>Дорогой интерьер и крутой дизайн клуба, а также высочайший уровень сервиса</p>
+					</li>
+					<li class="has-img" data-da=".about__list,992,4">
+						<div class="about__list-img about__list-img--right ibg">
+							<picture>
+    <source srcset="img/photo/about-list-img-desk-1.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/about-list-img-mob-1.jpg" alt="img">
+</picture>
+						</div>
+					</li>
+					<li class="right">
+						<h5>Невероятная атмосфера</h5>
+						<p>
+							яркие, уникальные вечеринки, которые навсегда остаются в памяти
+						</p>
+					</li>
+					<li class="left">
+						<h5>Профессиональное шоу</h5>
+						<p>
+							Номера шоу-балета концертного уровня по праву считаются хореографическим искусством
+						</p>
+					</li>
+					<li class="right">
+						<h5>Крутая и молодая команда</h5>
+						<p>
+							Работай и развивайся с такими же яркими личностями, как и ты
+						</p>
+					</li>
+					<li class="display-none-sm">
+						<div class="about__list-img about__list-img--left ibg">
+							<picture>
+    <source srcset="img/photo/about-list-img-desk-1.jpg" media="(min-width: 600px)">
+    <img   src="img/photo/about-list-img-mob-2.jpg" alt="img">
+</picture>
+						</div>
+					</li>
+					<li class="left">
+						<h5>8 лет в клубной индустрии</h5>
+						<p>
+							Колоссальный опыт в данной сфере делает нас лидерами рынка
+						</p>
+					</li>
+					<li class="right">
+						<h5>Представительство в крупнейших городах</h5>
+						<p>
+							Волгоград, Краснодар, Ростов-на-Дону, Москва
+						</p>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section class="gallery">
+			<div class="container-xs">
+				<h2 class="gallery__title subtitle">
+					фотогалерея
+				</h2>
+				<div class="gallery__body">
+					<div class="gallery__col-1">
+						<div class="gallery__img-big ibg">
+							<img src="img/photo/gallery-big-img.jpg" alt="">
+						</div>
+					</div>
+					<div class="gallery__col-2">
+						<div class="gallery__img-small ibg">
+							<img src="img/photo/gallery-small-img.jpg" alt="">
+						</div>
+						<div class="gallery__count">
+							32+
+						</div>
+					</div>
+				</div>
+				<a href="#" class="gallery__link">
+					Открыть альбом
+					<img src="img/icons/chevron-right.svg" alt="">
+				</a>
+			</div>
+		</section>
+
+		<section class="girls">
+			<div class="girls__body container">
+				<div class="girls__head">
+					<h2 class="girls__title title-2">
+						наши <br> девушки
+					</h2>
+					<div class="slider-buttons">
+						<div class="slider-button prev">
+							<img src="img/icons/slider-arrow-left.svg" alt="">
+						</div>
+						<div class="slider-button next">
+							<img src="img/icons/slider-arrow-right.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="girls__slider swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="girl-card">
+								<div class="girl-card__img ibg">
+									<img src="img/photo/girls-img-1.jpg" alt="">
+								</div>
+								<a data-fancybox href="https://youtu.be/khmf9wbbbBA" class="girl-card__icon-play">
+									<img src="img/icons/Play.svg" alt="">
+								</a>
+								<div class="girl-card__box">
+									<div class="girl-card__box-row">
+										<div class="girl-card__box-title">
+											Марина
+										</div>
+									</div>
+									<div class="girl-card__box-row">
+										<div class="girl-card__box-item">
+											<p class="girl-card__box-label">Доход в мес.:</p>
+											<p class="girl-card__box-text">
+												ОТ <span>120 000</span> ₽
+											</p>
+										</div>
+										<div class="girl-card__box-item">
+											<p class="girl-card__box-label">Опыт работы:</p>
+											<p class="girl-card__box-text"><span>2</span> ГОДА</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="girl-card">
+								<div class="girl-card__img ibg">
+									<img src="img/photo/girls-img-2.jpg" alt="">
+								</div>
+								<a data-fancybox href="https://youtu.be/khmf9wbbbBA" class="girl-card__icon-play">
+									<img src="img/icons/Play.svg" alt="">
+								</a>
+								<div class="girl-card__box">
+									<div class="girl-card__box-row">
+										<div class="girl-card__box-title">
+											Света
+										</div>
+									</div>
+									<div class="girl-card__box-row">
+										<div class="girl-card__box-item">
+											<p class="girl-card__box-label">Доход в мес.:</p>
+											<p class="girl-card__box-text">
+												ОТ <span>120 000</span> ₽
+											</p>
+										</div>
+										<div class="girl-card__box-item">
+											<p class="girl-card__box-label">Опыт работы:</p>
+											<p class="girl-card__box-text"><span>2</span> ГОДА</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="girl-card">
+								<div class="girl-card__img ibg">
+									<img src="img/photo/girls-img-3.jpg" alt="">
+								</div>
+								<a data-fancybox href="https://youtu.be/khmf9wbbbBA" class="girl-card__icon-play">
+									<img src="img/icons/Play.svg" alt="">
+								</a>
+								<div class="girl-card__box">
+									<div class="girl-card__box-row">
+										<div class="girl-card__box-title">
+											Катя
+										</div>
+									</div>
+									<div class="girl-card__box-row">
+										<div class="girl-card__box-item">
+											<p class="girl-card__box-label">Доход в мес.:</p>
+											<p class="girl-card__box-text">
+												ОТ <span>120 000</span> ₽
+											</p>
+										</div>
+										<div class="girl-card__box-item">
+											<p class="girl-card__box-label">Опыт работы:</p>
+											<p class="girl-card__box-text"><span>2</span> ГОДА</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!-- == FOOTER ================== -->
+	
+	<!-- == // FOOTER ================== -->
+	<!-- @@includ e('common/popup/_popup.html',{}) -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

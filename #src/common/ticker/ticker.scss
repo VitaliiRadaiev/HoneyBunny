@@ -1,0 +1,30 @@
+.ticker {
+    margin-bottom: 80px;
+
+    @media (min-width: 768px) {
+        margin-bottom: 120px;
+    }
+
+    & .swiper-slide {
+        width: auto;
+        white-space: nowrap;
+        font-family: $secondFontFamily;
+        font-style: italic;
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #e6e6e6;
+
+        @media (min-width: 768px) {
+            font-size: 80px;
+        }
+        @media (min-width: 992px) {
+            font-size: 140px;
+        }
+    }
+
+    & .swiper-wrapper {
+        transition-timing-function: linear !important;
+    }
+}
