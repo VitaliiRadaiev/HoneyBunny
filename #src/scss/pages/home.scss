@@ -159,6 +159,10 @@
         position: relative;
         z-index: 2;
 
+        & span {
+            display: inline-block;
+        }
+
         & strong {
             display: inline-block;
             font-size: 92px;
@@ -192,13 +196,17 @@
         font-weight: 800;
         font-size: 12px;
         line-height: 100%;
-        display: flex;
-        flex-direction: column;
+
         z-index: 4;
         text-transform: uppercase;
         transform: translateX(28%);
 
-        & > span {
+        & div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &  span {
             display: inline-block;
             transform: rotate(-90deg) translateX(50%);
         }
@@ -487,7 +495,7 @@
                     font-size: 62px;
                 }
 
-                & span {
+                & span:nth-child(2) {
                     font-family: $secondFontFamily;
                     font-style: italic;
                     display: block;
@@ -507,7 +515,7 @@
         z-index: 1;
         background-color: #fff;
 
-        & img {
+        & img, & svg {
             width: 100%;
             height: auto;
         }
@@ -885,6 +893,8 @@
         color: #fff;
         max-width: 830px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: column;
     }
 
     &__body {

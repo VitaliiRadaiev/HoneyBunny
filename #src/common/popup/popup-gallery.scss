@@ -1,0 +1,113 @@
+.popup {
+    &.gallery {
+        @media (max-width: $md3+px) {
+            background-color: $mainColor;
+        }
+        & .popup_body {
+            padding: 0;
+            min-width: 0;
+        }
+        & .popup_content {
+            min-width: 0;
+            max-width: none;
+            background-color: transparent;
+        }
+    }
+}
+
+
+.popup-gallery {
+    min-width: 0;
+    background-color: $mainColor;
+    &__slider {
+        min-width: 0;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: $md3+px) {
+            & .slider-btn {
+                display: none;
+            }
+        }
+
+        & .swiper-slide {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            @media (min-width: 768px) {
+                opacity: 0 !important;
+
+                &.swiper-slide-active {
+                    opacity: 1 !important;
+                }
+    
+                & img {
+                    position: static;
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: auto;
+                    height: auto;
+                }
+
+                padding-bottom: 180px;
+                padding-top: 40px;
+            }
+            
+        } 
+    }
+
+    &__thumb {
+        position: absolute;
+        width: 100%;
+        z-index: 2;
+        left: 0;
+        bottom: 40px;
+        min-width: 0;
+        padding: 0 40px;
+
+        @media (max-width: $md3+px) {
+            bottom: 20px;
+            padding: 0 20px;
+        }
+
+        // @media (max-width: $md3+px) {
+        //     display: none;
+        // }
+
+        & .swiper-container {
+            overflow: visible;
+        }
+
+        & .swiper-slide {
+            height: 100px;
+            width: 146px;
+            cursor: pointer;
+            transition: all .3s ease;
+            border: 1px solid transparent;
+
+            @media (max-width: $md3+px) {
+                height: 60px;
+                width: 80px;
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    transform: translateY(-10px);
+                }
+            }
+
+            &.swiper-slide-thumb-active {
+                border-color: #fff;
+                transform: translateY(-10px);
+
+                @media (max-width: $md3+px) {
+                    transform: translateY(-5px);
+                }
+            }
+        }
+    }
+}
+

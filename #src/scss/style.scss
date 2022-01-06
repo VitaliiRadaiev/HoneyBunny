@@ -40,14 +40,6 @@
 @import "forms";
 // ==== FORM STYLE DEFAULT ===========================================================================================
 
-// ==== BORDER ===========================================================================================
-@import "../common/burger/burger";
-// ==== BORDER ===========================================================================================
-
-// ==== POPUP ===========================================================================================
-//@import "common/popup/popup";
-// ==== // POPUP ===========================================================================================
-
 * {
 	padding: 0px;
 	margin: 0px;
@@ -217,6 +209,8 @@ textarea {
 	font-size: 42px;
 	line-height: 100%;
 	text-transform: uppercase;
+	display: flex;
+	flex-direction: column;
 
 	@media (min-width: 768px) {
 		font-size: 62px;
@@ -299,17 +293,44 @@ textarea {
 			transform: translateY(-5px);
 		}
 	}
+
+	&--white {
+		background-color: #fff;
+		color: #000;
+		box-shadow: 0px 24px 20px -10px rgba(255, 255, 255, 0.2);
+	}
 }
 
 // === and btn ========================================================================
 
 .input {
+	display: block;
+	width: 100%;
+	padding-bottom: 25px;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 110%;
+	color: #ffffff;
+	border-bottom: 1px solid rgba(#fff, .45);
+	background-color: transparent;
+
+	&::placeholder {
+		color: #fff;
+	}
 }
 
 .textarea {
 }
 
 .link {
+}
+.word {
+	display: inline-block;
+}
+
+.white-space {
+	display: inline-block;
+	width: 0.18em;
 }
 
 // === TEXT CONTETN BLOCK ========================================================================
@@ -365,6 +386,7 @@ textarea {
 @import "../common/ticker/ticker";
 @import "../common/work-whith-us/work-whith-us";
 @import "../common/girls/girls";
+@import "../common/faq/faq";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -374,3 +396,9 @@ textarea {
 // ==== AND HOME =====================================================
 
 // ==== AND PAGES =====================================================
+
+
+// ==== POPUP ===========================================================================================
+@import "../common/popup/popup";
+@import "../common/popup/popup-gallery";
+// ==== // POPUP ===========================================================================================

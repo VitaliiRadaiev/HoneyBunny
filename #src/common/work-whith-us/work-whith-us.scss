@@ -71,6 +71,12 @@
             padding-left: 20px;
             padding-right: 20px;
 
+            &:not(.swiper-slide-active) {
+                & .top, & .bottom {
+                    opacity: 0;
+                }
+            }
+
 
             @media (min-width: 992px) {
                 height: 520px;
@@ -91,7 +97,7 @@
                 line-height: 100%;
                 text-transform: uppercase;
                 max-width: 240px;
-
+                transition: all .3s ease;
                 @media (min-width: 992px) {
                     font-size: 24px;
                 }
@@ -108,6 +114,7 @@
                 line-height: 90%;
                 text-transform: uppercase;
                 transform: translateY(9px);
+                transition: all .3s ease;
 
                 &  strong {
                     display: block;

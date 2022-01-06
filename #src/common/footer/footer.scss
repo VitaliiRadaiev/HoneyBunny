@@ -1,178 +1,243 @@
 .footer {
-    border-top: 27px solid #eae8e8;
-
     &__body {
-        padding-top: 31px;
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 1335px;
-        padding-left: 113px;
-        margin-bottom: 16px;
-
-        @media (max-width: $md3+px) {
-            display: block;
-            padding-left: 40px;
-        }
-        @media (max-width: $md4+px) {
-            padding-left: 25px;
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
         }
     }
 
-    &__column {
-        flex: 1 1 auto;
-        max-width: 307px;
-        min-width: 220px;
-        margin-bottom: 40px;
-
-        &:not(:last-child) {
-            margin-right: 60px;
+    &__col-1 {
+        position: relative;
+        padding-bottom: 120px;
+        margin-bottom: 120px;
+        color: #fff;
+        &:before {
+            position: absolute;
+            content: "";
+            right: -20px;
+            bottom: 0;
+            width: 150vw;
+            height: calc(100% - 35px);
+            z-index: -1;
+            background-color: #000;
         }
 
-        @media (max-width: $md3+px) {
-            margin-right: 0 !important;
-         }
+        @media (min-width: 768px) {
+            flex: 0 0 410px;
+            padding-right: 20px;
+            padding-bottom: 80px;
+            margin-bottom: 0;
 
-        &_1 {
-        }
-
-        &_2 {
-            margin-left: auto;
-            padding-top: 107px;
-
-            @media (max-width: $md3+px) {
-                margin-left: 0;
-                padding-top: 0;
+            &:before {
+                height: calc(100% - 52px);
+                right: 0;
             }
         }
-    }
 
-    &__logo {
-        margin-left: -75px;
-        margin-bottom: 50px;
-        max-width: 216px;
-
-        @media (max-width: $md3+px) {
-           margin-left: -14px;
-        }
-
-    }
-
-    &__list {
-        margin-bottom: 20px;
-        color: $mainColor;
-        font-family: "HelveticaNeueCyr";
-        font-size: 14px;
-        line-height: 20px;
-
-        & strong {
-            font-weight: 500;
+        @media (min-width: 992px) {
+            flex: 0 0 520px;
+            padding-right: 75px;
         }
     }
 
-    &__link {
-        color: $mainColor;
-        font-family: "HelveticaNeueCyr";
-        font-size: 14px;
-        line-height: 20px;
-        &:hover {
-            text-decoration: underline;
+    &__col-2 {
+        padding-left: 60px;
+        max-width: 335px;
+        margin: 0 auto 120px;
+
+        @media (min-width: 768px) {
+            padding-left: 20px;
+            padding-top: 185px;
+            margin-bottom: 0;
+            max-width: 360px;
+            flex: 1 1 auto;
+        }
+
+        @media (min-width: 992px) {
+            padding-left: 60px;
         }
     }
 
     &__title {
-        color: $mainColor;
-        font-size: 16px;
-        font-weight: 500;
-        letter-spacing: 0.1px;
-        line-height: 24px;
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        & > strong {
+            &:first-child {
+                color: #000;
+            }
+        }
     }
 
-    &__text {
-        color: $mainColor;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 19px;
-        margin-bottom: 20px;
-        max-width: 217px;
+    &__subtitle {
+        margin-bottom: 60px;
+
+        &:before {
+            background-color: #fff;
+        }
     }
 
     &__bottom {
-        background-color: rgba(120, 120, 128, 0.36);
-
-        &-inner {
-            height: 39px;
-            max-width: 1335px;
-            padding-left: 113px;
+        background: #fafafa;
+        border-top: 1px solid #cecece;
+        & p {
+            min-height: 60px;
             display: flex;
+            justify-content: center;
             align-items: center;
-            color: #383838;
+            text-align: center;
             font-size: 14px;
-            font-weight: 400;
-            line-height: 20px;
+            line-height: 140%;
+            color: #808080;
 
-            @media (max-width: $md3+px) {
-                padding-left: 40px;
-            }
-            @media (max-width: $md4+px) {
-                padding-left: 25px;
-                text-align: center;
+            @media (min-width: 992px) {
+                justify-content: flex-end;
             }
         }
     }
 }
 
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
-.form-subscribe {
-    margin-bottom: 27px;
-    &__inner {
-        display: flex;
-        align-items: center;
-        background-color: #f2f2f2;
+    &__title {
+        font-size: 16px;
+        line-height: 140%;
+        color: #808080;
+        margin-bottom: 50px;
     }
 
-    &__input {
-        flex: 1 1 auto;
-        display: inline-flex;
-        align-items: center;
-        padding: 10px 20px;
-        background: transparent;
-        color: $mainColor;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        min-height: 45px;
+    &__items {
+        margin-bottom: 60px;
+    }
 
-        &::placeholder {
-            color: $mainColor;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 50px;
         }
     }
 
-    &__submit {
-        display: inline-flex;
-        min-height: 45px;
-        flex: 0 0 64px;
-        background: transparent;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all .2s ease;
+    & button {
+        align-self: center;
+    }
+}
 
-        @media (min-width: 992px) {
-            &:hover {
-                background-color: #dddddd;
+.checkbox {
+    display: flex;
+    cursor: pointer;
+
+    & input {
+        display: none;
+
+        &:checked {
+            & ~ .checkbox__square:before {
+                opacity: 1;
             }
         }
+    }
 
-        & > span {
-            min-width: 14px;
-            height: 12px;
+    &__square {
+        flex: 0 0 auto;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #fff;
+        margin-right: 15px;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            display: block;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 140%;
+        color: #808080;
+        max-width: 267px;
+    }
+}
+
+.contacts {
+    &__head {
+        min-height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 60px;
+        max-width: 295px;
+
+        & img {
+            width: calc(100% + 20px);
+        }
+    }
+
+    &__title {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        margin-left: -3px;
+        margin-bottom: -7px;
+        font-size: 42px !important;
+    }
+
+    &__items {
+        margin-bottom: 60px;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__label {
+        font-size: 12px;
+        line-height: 140%;
+        color: #808080;
+        margin-bottom: 10px;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 110%;
+        color: #000000;
+    }
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+
+    & > li {
+        margin-right: 20px;
+
+        & a {
+            display: block;
+            height: 30px;
+            transition: all 0.3s ease;
 
             & img {
-                width: 100%;
+                height: 100%;
+                width: auto;
+            }
+
+            @media (min-width: 992px) {
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
     }

@@ -16,14 +16,14 @@
 	<link rel="stylesheet" href="css/style.css">
 	<style>
 		body.is-load ._preload-body {
-			opacity: 0;
-			visibility: hidden;
+			height: 0;
+			overflow: hidden;
 		}
 
 		body.is-load ._preload-body:before {
 			display: none;
 		}
-
+		
 		._preload-body {
 			background-color: #fff;
 			position: fixed;
@@ -72,13 +72,71 @@ defer
 <body>
 	<div class="_preload-body"></div>
 	<!-- == TOP LINE ================== -->
-	<!-- @@includ e('common/header/_header.html',{}) -->
+	<div class="burger">
+    <img src="img/icons/burger.svg" alt="">
+</div>
+
+<nav class="nav">
+    <div class="nav__close"><span></span></div>
+    <ul class="nav__list">
+        <li>
+            <a href="#" data-id="01" class="nav__item">
+                <span>01.</span>
+                главная
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="02" class="nav__item">
+                <span>
+                    02.
+                </span>
+                Хочу так
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="03" class="nav__item">
+                <span>03.</span>
+                как?
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="04" class="nav__item">
+                <span>04.</span>
+                вакансия
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="05" class="nav__item">
+                <span>05.</span>
+                что получу?
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="06" class="nav__item">
+                <span>06.</span>
+                о клубе
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="07" class="nav__item">
+                <span>07.</span>
+                Отзывы
+            </a>
+        </li>
+        <li>
+            <a href="#" data-id="08" class="nav__item">
+                <span>08.</span>
+                Контакты
+            </a>
+        </li>
+    </ul>
+</nav>
 	<!-- == // TOP LINE ================== -->
 
 
 	<main class="_page home-page _padding-top">
 
-		<section class="promo-header">
+		<section data-id="01" class="promo-header">
 			<div class="promo-header__bg ibg">
 				<picture>
     <source srcset="img/photo/promo-header-desk.jpg" media="(min-width: 600px)">
@@ -86,18 +144,18 @@ defer
 </picture>
 			</div>
 			<div class="promo-header__body container">
-				<div class="promo-header__suptitle">Начни карьеру</div>
-				<h1 class="promo-header__title">
+				<div class="promo-header__suptitle" data-fadeInLeft-anim data-delay="100">Начни карьеру</div>
+				<h1 class="promo-header__title" data-fadeInLeft-anim data-delay="300">
 					в модном <br> клубе
 				</h1>
-				<div class="promo-header__text">и зарабатывай от <span>100 000 ₽</span></div>
+				<div class="promo-header__text" data-fadeInLeft-anim data-delay="500">и зарабатывай от <span>100 000 ₽</span></div>
 			</div>
 		</section>
-		<div class="btn-wrap">
-			<a href="#" class="btn" data-da=".promo-header__body,768,last">Начать карьеру</a>
+		<div class="btn-wrap" >
+			<a href="#popupForm" class="btn popup-link" data-da=".promo-header__body,768,last" data-fadeIn-anim data-delay="700">Начать карьеру</a>
 		</div>
 
-		<div class="ticker swiper-container">
+		<div class="ticker swiper-container" data-fadeIn-anim>
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					Стань независимой, самодостаточной, счастливой
@@ -111,17 +169,17 @@ defer
 			</div>
 		</div>
 
-		<section class="intro">
+		<section data-id="02" class="intro">
 			<div class="intro__row-1">
 				<div class="container-xs">
 					<div>
-						<h3 class="intro__title-1 title-3">
+						<h3 class="intro__title-1 title-3" data-fadeInLeft-anim>
 							Яркая <br> и статусная жизнь
 						</h3>
-						<div class="intro__subtitle subtitle">
+						<div class="intro__subtitle subtitle" data-fadeInLeft-anim>
 							не только в сериалах и социальных сетях звезд
 						</div>
-						<h3 class="intro__title-2 title-3">
+						<h3 class="intro__title-2 title-3" data-fadeInLeft-anim>
 							она доступна действительно каждому человеку.
 						</h3>
 					</div>
@@ -130,8 +188,10 @@ defer
 			<div class="intro__row-2">
 				<div class="container-xs">
 					<div class="intro__img-label" data-da=".intro__row-2-bottom,768,first">
-						и особенно...
-						<strong>
+						<span data-fadeInLeft-anim>
+							и особенно...
+						</span>
+						<strong data-fadeIn-anim data-delay="700">
 							ТЕБЕ
 						</strong>
 					</div>
@@ -153,29 +213,31 @@ defer
 </picture>
 						</div>
 						<ul class="box__list">
-							<li>
+							<li data-fadeIn-anim="" data-delay="100">
 								Путешествия в самые желанные места мира
 							</li>
-							<li>
+							<li data-fadeIn-anim="" data-delay="200">
 								Ужины в лучших ресторанах
 							</li>
-							<li>
+							<li data-fadeIn-anim="" data-delay="300">
 								Одежда от именитых брендов
 							</li>
-							<li>
+							<li data-fadeIn-anim="" data-delay="400">
 								А также крутая машина и личное жилье
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="intro__arrow">
-					<span>дальше больше</span>
-					<img src="img/icons/arrow-down.svg" alt="">
+					<div data-fadeInDown-anim data-delay="800">
+						<span>дальше больше</span>
+						<img src="img/icons/arrow-down.svg" alt="">
+					</div>
 				</div>
 			</div>
 			<div class="intro__row-3">
 				<div class="container-xs">
-					<div class="intro__text text-content">
+					<div class="intro__text text-content" data-text-anim>
 						<p>
 							Всего этого можно достичь и прожить свою лучшую жизнь.
 						</p>
@@ -188,7 +250,7 @@ defer
 			</div>
 		</section>
 
-		<section class="lower-works">
+		<section data-id="03" class="lower-works">
 			<div class="lower-works__bg-wrap">
 				<div class="lower-works__bg ibg">
 					<picture>
@@ -198,23 +260,23 @@ defer
 				</div>
 				<div class="lower-works__row-1">
 					<div class="container-xs">
-						<h2 class="lower-works__title title-2">
+						<h2 class="lower-works__title title-2" data-fadeInLeft-anim="">
 							ДЛЯ ЭТОГО <br> НУЖЕН
 						</h2>
-						<div class="lower-works__subtitle subtitle">
+						<div class="lower-works__subtitle subtitle" data-fadeInLeft-anim>
 							ВЫСОКИЙ ДОХОД
 						</div>
-						<div class="lower-works__text text-content">
+						<div class="lower-works__text text-content" data-text-anim="">
 							Достичь такого уровня жизни можно разными путями.
 						</div>
-						<div class="lower-works__label">например:</div>
+						<div class="lower-works__label" data-fadeIn-anim="">например:</div>
 					</div>
 				</div>
 				<div class="lower-works__row-2">
 					<div class="container">
 						<ul class="lower-works__list">
 							<li>
-								<div class="work-card">
+								<div class="work-card" data-fadeIn-anim="">
 									<div class="work-card__img ibg">
 										<img src="img/photo/work-card-img-1.jpg" alt="">
 									</div>
@@ -237,7 +299,7 @@ defer
 								</div>
 							</li>
 							<li>
-								<div class="work-card">
+								<div class="work-card" data-fadeIn-anim="">
 									<div class="work-card__img ibg">
 										<img src="img/photo/work-card-img-2.jpg" alt="">
 									</div>
@@ -261,7 +323,7 @@ defer
 								</div>
 							</li>
 							<li>
-								<div class="work-card">
+								<div class="work-card" data-fadeIn-anim="">
 									<div class="work-card__img ibg">
 										<img src="img/photo/work-card-img-3.jpg" alt="">
 									</div>
@@ -285,7 +347,7 @@ defer
 								</div>
 							</li>
 							<li>
-								<div class="work-card">
+								<div class="work-card" data-fadeIn-anim="">
 									<div class="work-card__img ibg">
 										<img src="img/photo/work-card-img-4.jpg" alt="">
 									</div>
@@ -315,11 +377,11 @@ defer
 				<div class="lower-works__row-3">
 					<div class="container-sm">
 						<div class="lower-works__bottom">
-							<div>
+							<div data-fadeIn-anim="">
 								Но...
 							</div>
 							<div>
-								Есть другой <span>путь</span>
+								<span data-fadeIn-anim="" data-delay="300">Есть другой</span> <span data-fadeIn-anim="" data-delay="600">путь</span>
 							</div>
 						</div>
 					</div>
@@ -327,11 +389,22 @@ defer
 				</div>
 			</div>
 			<div class="lower-works__bottom-img">
-				<img src="img/photo/lower-works-bottom.svg" alt="">
+				<svg width="375" height="228" viewBox="0 0 375 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g clip-path="url(#clip0_51_66)">
+					<path d="M650 0L188 191L-274 0H650Z" fill="black"/>
+					<path data-fadeInDown-anim="" data-delay="900" d="M-225.623 37H-274L188 228L650 37H601.623L188 208L-225.623 37Z" fill="black"/>
+					</g>
+					<defs>
+					<clipPath id="clip0_51_66">
+					<rect width="375" height="228" fill="white"/>
+					</clipPath>
+					</defs>
+					</svg>
+					
 			</div>
 		</section>
 
-		<section class="cta">
+		<section data-id="04" class="cta">
 			<div class="container cta__row-1">
 				<div class="cta__img ibg">
 					<picture>
@@ -342,22 +415,22 @@ defer
 			</div>
 			<div class="container-xs cta__row-2">
 				<h2 class="cta__title title-1">
-					<strong>Стань</strong>
-					<strong>Хостес</strong>
+					<strong data-fadeInLeft-anim="">Стань</strong>
+					<strong data-fadeInLeft-anim="" data-delay="300">Хостес</strong>
 				</h2>
-				<div class="cta__subtitle subtitle">
+				<div class="cta__subtitle subtitle" data-fadeInLeft-anim>
 					премиального <br> шоу-бара
 				</div>
-				<div class="cta__text text-content">
+				<div class="cta__text text-content" data-text-anim>
 					Твой первый и важный шаг к построению успешного будущего!
 				</div>
-				<div class="cta__btn-wrap">
-					<a href="#" class="btn">Стать хостес</a>
+				<div class="cta__btn-wrap" data-fadeIn-anim>
+					<a href="#popupForm" class="btn popup-link">Стать хостес</a>
 				</div>
 			</div>
 		</section>
 
-		<div class="ticker swiper-container">
+		<div class="ticker swiper-container" data-fadeIn-anim>
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					что ты получишь? что ты получишь?
@@ -371,11 +444,11 @@ defer
 			</div>
 		</div>
 
-		<section class="advantages">
+		<section data-id="05" class="advantages">
 			<div class="container-sm">
 				<ul class="advantages__list">
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Высокий</strong>
@@ -401,7 +474,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Гибкий</strong>
@@ -423,7 +496,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Без</strong>
@@ -445,7 +518,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Внешние</strong>
@@ -468,7 +541,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Личностный</strong>
@@ -490,7 +563,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Тренировки</strong>
@@ -512,7 +585,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Яркие и крутые</strong>
@@ -534,7 +607,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Взаимодействие</strong>
@@ -557,7 +630,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Корпоративное</strong>
@@ -579,7 +652,7 @@ defer
 						</div>
 					</li>
 					<li>
-						<div class="advantages-card">
+						<div class="advantages-card" data-fadeIn-anim>
 							<div class="advantages-card__col-1">
 								<h4 class="advantages-card__title">
 									<strong>Карьерный</strong>
@@ -607,10 +680,10 @@ defer
 		<section class="work-whith-us">
 			<div class="work-whith-us__body container-sm">
 				<div class="work-whith-us__head">
-					<h2 class="work-whith-us__title title-2">
+					<h2 class="work-whith-us__title title-2" data-fadeInLeft-anim="">
 						Работая в <br> Honey Bunny
 					</h2>
-					<div class="work-whith-us__subtitle subtitle">
+					<div class="work-whith-us__subtitle subtitle" data-fadeInLeft-anim="">
 						ты не будешь <br> работать ни дня,
 					</div>
 				</div>
@@ -659,13 +732,13 @@ defer
 						</div>
 					</div>
 				</div>
-				<div class="btn-wrap">
-					<a href="#" class="btn" data-da=".work-whith-us__head,992,last">Стать хостес</a>
+				<div class="btn-wrap" >
+					<a href="#popupForm" class="btn popup-link" data-da=".work-whith-us__head,992,last" data-fadeIn-anim="">Стать хостес</a>
 				</div>
 			</div>
 		</section>
 
-		<section class="about">
+		<section data-id="06" class="about">
 			<div class="about__head container">
 				<div class="about__bg ibg">
 					<picture>
@@ -675,22 +748,24 @@ defer
 				</div>
 				<div class="about__title-wrap">
 					<h2 class="about__title title-1">
-						о <br> Honey <br> Bunny
+						<strong data-fadeInLeft-anim="">о</strong>
+						<strong data-fadeInLeft-anim="" data-delay="300">Honey</strong>
+						<strong data-fadeInLeft-anim="" data-delay="600">Bunny</strong>
 					</h2>
 				</div>
 			</div>
 			<div class="about__body container-xs">
 				<ul class="about__list text-content">
 					<li>
-						<h4>Honey Bunny -</h4>
-						<p>сеть премиум шоу-баров</p>
+						<h4 data-text-anim="">Honey Bunny -</h4>
+						<p data-text-anim>сеть премиум шоу-баров</p>
 					</li>
 					<li class="left">
-						<h5>Премиальный уровень заведения</h5>
-						<p>Дорогой интерьер и крутой дизайн клуба, а также высочайший уровень сервиса</p>
+						<h5 data-text-anim>Премиальный уровень заведения</h5>
+						<p data-text-anim>Дорогой интерьер и крутой дизайн клуба, а также высочайший уровень сервиса</p>
 					</li>
 					<li class="has-img" data-da=".about__list,992,4">
-						<div class="about__list-img about__list-img--right ibg">
+						<div class="about__list-img about__list-img--right ibg" data-fadeIn-anim>
 							<picture>
     <source srcset="img/photo/about-list-img-desk-1.jpg" media="(min-width: 600px)">
     <img   src="img/photo/about-list-img-mob-1.jpg" alt="img">
@@ -698,25 +773,25 @@ defer
 						</div>
 					</li>
 					<li class="right">
-						<h5>Невероятная атмосфера</h5>
-						<p>
+						<h5 data-text-anim>Невероятная атмосфера</h5>
+						<p data-text-anim>
 							яркие, уникальные вечеринки, которые навсегда остаются в памяти
 						</p>
 					</li>
 					<li class="left">
-						<h5>Профессиональное шоу</h5>
-						<p>
+						<h5 data-text-anim>Профессиональное шоу</h5>
+						<p data-text-anim>
 							Номера шоу-балета концертного уровня по праву считаются хореографическим искусством
 						</p>
 					</li>
 					<li class="right">
-						<h5>Крутая и молодая команда</h5>
-						<p>
+						<h5 data-text-anim>Крутая и молодая команда</h5>
+						<p data-text-anim>
 							Работай и развивайся с такими же яркими личностями, как и ты
 						</p>
 					</li>
 					<li class="display-none-sm">
-						<div class="about__list-img about__list-img--left ibg">
+						<div class="about__list-img about__list-img--left ibg" data-fadeIn-anim>
 							<picture>
     <source srcset="img/photo/about-list-img-desk-1.jpg" media="(min-width: 600px)">
     <img   src="img/photo/about-list-img-mob-2.jpg" alt="img">
@@ -724,14 +799,14 @@ defer
 						</div>
 					</li>
 					<li class="left">
-						<h5>8 лет в клубной индустрии</h5>
-						<p>
+						<h5 data-text-anim>8 лет в клубной индустрии</h5>
+						<p data-text-anim>
 							Колоссальный опыт в данной сфере делает нас лидерами рынка
 						</p>
 					</li>
 					<li class="right">
-						<h5>Представительство в крупнейших городах</h5>
-						<p>
+						<h5 data-text-anim>Представительство в крупнейших городах</h5>
+						<p data-text-anim>
 							Волгоград, Краснодар, Ростов-на-Дону, Москва
 						</p>
 					</li>
@@ -741,36 +816,37 @@ defer
 
 		<section class="gallery">
 			<div class="container-xs">
-				<h2 class="gallery__title subtitle">
+				<h2 class="gallery__title subtitle" data-fadeInLeft-anim="">
 					фотогалерея
 				</h2>
 				<div class="gallery__body">
 					<div class="gallery__col-1">
-						<div class="gallery__img-big ibg">
+						<div class="gallery__img-big ibg" data-fadeIn-anim="">
 							<img src="img/photo/gallery-big-img.jpg" alt="">
 						</div>
 					</div>
 					<div class="gallery__col-2">
-						<div class="gallery__img-small ibg">
+						<div class="gallery__img-small ibg" data-fadeIn-anim="" data-delay="300">
 							<img src="img/photo/gallery-small-img.jpg" alt="">
 						</div>
-						<div class="gallery__count">
+						<div class="gallery__count" data-fadeIn-anim="" data-delay="600">
 							32+
 						</div>
 					</div>
 				</div>
-				<a href="#" class="gallery__link">
+				<a href="#popupGallery" class="gallery__link popup-link" data-fadeInLeft-anim="" data-delay="900">
 					Открыть альбом
 					<img src="img/icons/chevron-right.svg" alt="">
 				</a>
 			</div>
 		</section>
 
-		<section class="girls">
+		<section data-id="07" class="girls">
 			<div class="girls__body container">
 				<div class="girls__head">
 					<h2 class="girls__title title-2">
-						наши <br> девушки
+						<strong data-fadeInLeft-anim="">наши</strong>
+						<strong data-fadeInLeft-anim="" data-delay="100">девушки</strong>
 					</h2>
 					<div class="slider-buttons">
 						<div class="slider-button prev">
@@ -875,13 +951,619 @@ defer
 			</div>
 		</section>
 
+		<section class="faq">
+			<div class="container-xs">
+				<h2 class="faq__title title-2" data-fadeInLeft-anim="">FAQ</h2>
+				<ul class="faq__list">
+					<li class="" data-fadeIn-anim>
+						<div class="faq__list-title">
+							Где я буду жить?
+						</div>
+						<div class="plus"></div>
+						<div class="faq__text text-content">
+							<p>
+								Мы работаем только с теми клубами, которые предоставляют комфортное жилье для сотрудников. Чаще всего, это просторная квартира недалёко от места работы.
+							</p>
+						</div>
+					</li>
+					<li data-fadeIn-anim>
+						<div class="faq__list-title">
+							Оплачиваете ли вы проезд?
+						</div>
+						<div class="plus"></div>
+						<div class="faq__text text-content">
+							<p>
+								Мы работаем только с теми клубами, которые предоставляют комфортное жилье для сотрудников. Чаще всего, это просторная квартира недалёко от места работы.
+							</p>
+						</div>
+					</li>
+					<li data-fadeIn-anim>
+						<div class="faq__list-title">
+							Сколько я буду зарабатывать?
+						</div>
+						<div class="plus"></div>
+						<div class="faq__text text-content">
+							<p>
+								Мы работаем только с теми клубами, которые предоставляют комфортное жилье для сотрудников. Чаще всего, это просторная квартира недалёко от места работы.
+							</p>
+						</div>
+					</li>
+					<li data-fadeIn-anim>
+						<div class="faq__list-title">
+							Нужно ли знание иностранного языка?
+						</div>
+						<div class="plus"></div>
+						<div class="faq__text text-content">
+							<p>
+								Мы работаем только с теми клубами, которые предоставляют комфортное жилье для сотрудников. Чаще всего, это просторная квартира недалёко от места работы.
+							</p>
+						</div>
+					</li>
+				</ul>
+				<div class="faq__bottom" data-fadeIn-anim>
+					<a href="#">Задать вопрос</a>
+				</div>
+			</div>
+		</section>
+
 	</main>
 
 
 	<!-- == FOOTER ================== -->
-	
+	<footer  class="footer">
+    <div class="footer__body container">
+        <div class="footer__col-1">
+            <h2 class="footer__title title-2">
+                <strong data-fadeInLeft-anim>крутой</strong>
+                <strong data-fadeInLeft-anim data-delay="100">заголовок</strong>
+            </h2>
+            <div class="footer__subtitle subtitle" data-fadeInLeft-anim data-delay="200">
+                еще что-нибудь <br> допом к заголовку
+            </div>
+            <form action="/" class="form">
+                <div class="form__title" data-fadeIn-anim>Немного о вас</div>
+                <div class="form__items">
+                    <div class="form__item" data-fadeIn-anim>
+                        <input type="text" class="input" placeholder="Ваше имя">
+                    </div>
+                    <div class="form__item" data-fadeIn-anim>
+                        <input type="text" class="input _mask" placeholder="Телефон">
+                    </div>
+                    <div class="form__item" data-fadeIn-anim>
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            <div class="checkbox__square"></div>
+                            <div class="checkbox__text">
+                                Нажимая кнопку отправить вы соглашаетесь с политикой конфиденциальности
+                            </div>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn btn--white" data-fadeIn-anim>отправить</button>
+            </form>
+        </div>
+        <div data-id="08" class="footer__col-2">
+            <div class="contacts">
+                <div class="contacts__head ibg">
+                    <img src="img/photo/contact-head-img.jpg" alt="">
+                    <h2 class="contacts__title title-2" data-fadeInLeft-anim="">
+                        контакты
+                    </h2>
+                </div>
+                <div class="contacts__items">
+                    <div class="contacts__item" data-fadeIn-anim="">
+                        <div class="contacts__label">Телефон</div>
+                        <a href="tel:+79503321232" class="contacts__link">+7 950 332 12 32</a>
+                    </div>
+                    <div class="contacts__item" data-fadeIn-anim="">
+                        <div class="contacts__label">E-mail</div>
+                        <a href="mailto:honey.bunny@gmail.ru" class="contacts__link">honey.bunny@gmail.ru</a>
+                    </div>
+                    <div class="contacts__item" data-fadeIn-anim="">
+                        <div class="contacts__label">Соц. сети</div>
+                        <ul class="social">
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/instagram.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/telegram.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/vk.svg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="img/icons/wa.svg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <a href="#popupForm" class="btn popup-link" data-fadeIn-anim>Стать хостес</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom" >
+        <div class="container">
+            <p>
+                Политика конфиденциальности
+            </p>
+        </div>
+    </div>
+</footer>
 	<!-- == // FOOTER ================== -->
-	<!-- @@includ e('common/popup/_popup.html',{}) -->
+	<div class="popup" id="popupForm">
+	<div class="popup_body">
+		<div class="popup-form__close close-popup"><span></span></div>
+
+		<div class="popup_content">
+
+			<div class="popup-form">
+				
+				
+					<h3 class="popup-form__title title-3">
+						крутой <br> заголовок
+					</h3>
+					<form action="/" class="form">
+						<div class="form__title">Немного о вас</div>
+						<div class="form__items">
+							<div class="form__item">
+								<input type="text" class="input" placeholder="Ваше имя">
+							</div>
+							<div class="form__item">
+								<input type="text" class="input _mask" placeholder="Телефон">
+							</div>
+							<div class="form__item">
+								<label class="checkbox">
+									<input type="checkbox">
+									<div class="checkbox__square"></div>
+									<div class="checkbox__text">
+										Нажимая кнопку отправить вы соглашаетесь с политикой конфиденциальности
+									</div>
+								</label>
+							</div>
+						</div>
+						<button class="btn btn--white">отправить</button>
+					</form>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+	<div class="popup gallery" id="popupGallery">
+	<div class="popup_body">
+		<div class="popup-form__close close-popup"><span></span></div>
+		<div class="popup_content">
+			
+			<div class="popup-gallery">
+				<div class="popup-gallery__slider" data-mobile="false">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-3.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-4.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-5.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="slider-btn slider-btn-prev"></div>
+						<div class="slider-btn slider-btn-next"></div>
+					</div>
+				</div>
+				<div class="popup-gallery__thumb">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-3.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-4.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-5.png" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/gallery-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup gallery" id="popupGallery-2">
+	<div class="popup_body">
+		<div class="popup-close close-popup">
+			<img src="img/icons/close-white.svg" alt="">
+		</div>
+		<div class="popup_content">
+			
+			<div class="popup-gallery">
+				<div class="popup-gallery__slider" data-mobile="false">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-3.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-4.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-5.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-18.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-19.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-20.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-21.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-22.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-23.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-24.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-25.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-26.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-27.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-28.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-29.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-30.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+						<div class="slider-btn slider-btn-prev"></div>
+						<div class="slider-btn slider-btn-next"></div>
+					</div>
+				</div>
+				<div class="popup-gallery__thumb">
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-1.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-2.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-3.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-4.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-5.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-6.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-7.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-8.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-9.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-10.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-11.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-12.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-13.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-14.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-15.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-16.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-17.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-18.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-19.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-20.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-21.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-22.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-23.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-24.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-25.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-26.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-27.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-28.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-29.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+							<div class="swiper-slide ibg">
+								<img class="swiper-lazy" data-src="img/photo/news-gallery-img-30.jpg" alt="">
+								 <div class="swiper-lazy-preloader"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/jQueryScripts.min.js"></script>

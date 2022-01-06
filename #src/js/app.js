@@ -27,10 +27,14 @@ window.addEventListener('load', function () {
 	// ==== AND ADD PADDING-TOP ================================
 
 	@@include('_function.js');
+	@@include('forms.js');
 	@@include('../common/header/header.js');
 	@@include('../common/ticker/ticker.js');
 	@@include('../common/work-whith-us/work-whith-us.js');
 	@@include('../common/girls/girls.js'); 
+	@@include('../common/faq/faq.js'); 
+	@@include('../common/popup/popup.js'); 
+	@@include('../common/popup/popup-gallery.js');
 
 
 	let workCardTitles = document.querySelectorAll('.work-card__title');
@@ -50,6 +54,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	@@include('files/dynamic_adapt.js');
+	@@include('../common/animation/animation.js'); 
 
 	function testWebP(callback) {
 

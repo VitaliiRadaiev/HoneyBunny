@@ -1,18 +1,38 @@
-<div class="popup" id="popupSerch">
+<div class="popup" id="popupForm">
 	<div class="popup_body">
+		<div class="popup-form__close close-popup"><span></span></div>
+
 		<div class="popup_content">
 
-			<div class="popup__form-wrap">
-				<form action="/" class="popup-search">
-					<div class="popup-search__item">
-						<input class="popup-search__input" type="text" placeholder="SEARCH HERE…">
-					</div>
-					<div class="popup-search__item">
-						<button class="popup-search__submit" type="submit"><span>SUBMIT</span></button>
-					</div>
-				</form>
+			<div class="popup-form">
+				
+				
+					<h3 class="popup-form__title title-3">
+						крутой <br> заголовок
+					</h3>
+					<form action="/" class="form">
+						<div class="form__title">Немного о вас</div>
+						<div class="form__items">
+							<div class="form__item">
+								<input type="text" class="input" placeholder="Ваше имя">
+							</div>
+							<div class="form__item">
+								<input type="text" class="input _mask" placeholder="Телефон">
+							</div>
+							<div class="form__item">
+								<label class="checkbox">
+									<input type="checkbox">
+									<div class="checkbox__square"></div>
+									<div class="checkbox__text">
+										Нажимая кнопку отправить вы соглашаетесь с политикой конфиденциальности
+									</div>
+								</label>
+							</div>
+						</div>
+						<button class="btn btn--white">отправить</button>
+					</form>
+
 			</div>
-			
 		</div>
 	</div>
 </div>
