@@ -4315,6 +4315,11 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0 !important;
+}
+
+.popup-gallery__slider .swiper-slide.swiper-slide-active {
+  opacity: 1 !important;
 }
 
 .popup-gallery__thumb {
@@ -4763,13 +4768,8 @@ textarea {
   }
 
   .popup-gallery__slider .swiper-slide {
-    opacity: 0 !important;
     padding-bottom: 180px;
     padding-top: 40px;
-  }
-
-  .popup-gallery__slider .swiper-slide.swiper-slide-active {
-    opacity: 1 !important;
   }
 
   .popup-gallery__slider .swiper-slide img {
