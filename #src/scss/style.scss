@@ -143,6 +143,48 @@ textarea {
 	appearance: none;
 }
 
+[data-fadeIn-anim] {
+	transition: opacity 1s ease .3s;
+	opacity: 0;
+
+	&._active {
+		opacity: 1;
+	}
+}
+
+[data-fadeInLeft-anim] {
+	transition: all 1s ease .3s;
+	opacity: 0;
+	transform: translateX(-100%);
+
+	&._active {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+[data-fadeInRight-anim] {
+	transition: all 1s ease .3s;
+	opacity: 0;
+	transform: translateX(100%);
+
+	&._active {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+[data-fadeInDown-anim] {
+	transition: all 1s ease .3s;
+	opacity: 0;
+	transform: translateY(-100%);
+
+	&._active {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
 .center {
 	text-align: center;
 }

@@ -466,9 +466,13 @@
                 line-height: 100%;
                 text-transform: uppercase;
                 color: #ffffff;
-                opacity: 0.15;
+                
                 flex: 0 0 20px;
                 width: 20px;
+
+                & span {
+                    opacity: 0.15;
+                }
 
                 @media (min-width: 768px) {
                     font-size: 160px;

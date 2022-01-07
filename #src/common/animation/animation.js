@@ -66,29 +66,6 @@ function wrapWords(el) {
 
 
         counterItems.forEach(item => {
-
-            let animation = anime({
-                targets: item,
-                opacity: ['0', '1'],
-                easing: 'easeInOutQuad',
-                autoplay: false,
-                duration: 1000,
-                delay: 300,
-            });
-
-            window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
-                    setTimeout(() => { animation.play(); }, item.dataset.delay ? item.dataset.delay : 0);
-                })
-            })
-        })
-    }
-
-    let counterItems2 = document.querySelectorAll('.fadeIn');
-    if (counterItems2) {
-
-
-        counterItems2.forEach(item => {
             window.addEventListener('load', () => {
                 scrollTrigger(item, 15, () => {
                     setTimeout(() => { item.classList.add('_active') }, item.dataset.delay ? item.dataset.delay : 0);
@@ -104,33 +81,9 @@ function wrapWords(el) {
 
 
         counterItems.forEach(item => {
-
-            let animation = anime({
-                targets: item,
-                opacity: ['0', '1'],
-                translateX: ['-100%', 0],
-                easing: 'easeInOutQuad',
-                autoplay: false,
-                duration: 1000,
-                delay: 300,
-            });
-
             window.addEventListener('load', () => {
                 scrollTrigger(item, 15, () => {
-                    setTimeout(() => { animation.play(); }, item.dataset.delay ? item.dataset.delay : 0);
-                })
-            })
-        })
-    }
-
-    let counterItems2 = document.querySelectorAll('.fadeIn');
-    if (counterItems2) {
-
-
-        counterItems2.forEach(item => {
-            window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
-                    setTimeout(() => { item.classList.add('_active') }, item.dataset.delay ? item.dataset.delay : 0);
+                    setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
         })
@@ -141,73 +94,26 @@ function wrapWords(el) {
     let counterItems = document.querySelectorAll('[data-fadeInRight-anim]');
     if (counterItems) {
 
-
         counterItems.forEach(item => {
 
-            let animation = anime({
-                targets: item,
-                opacity: ['0', '1'],
-                translateX: ['100%', 0],
-                easing: 'easeInOutQuad',
-                autoplay: false,
-                duration: 1000,
-                delay: 300,
-            });
-
             window.addEventListener('load', () => {
                 scrollTrigger(item, 15, () => {
-                    setTimeout(() => { animation.play(); }, item.dataset.delay ? item.dataset.delay : 0);
-                })
-            })
-        })
-    }
-
-    let counterItems2 = document.querySelectorAll('.fadeIn');
-    if (counterItems2) {
-
-
-        counterItems2.forEach(item => {
-            window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
-                    setTimeout(() => { item.classList.add('_active') }, item.dataset.delay ? item.dataset.delay : 0);
+                    setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
         })
     }
 })();
+
 (function fadeInDown() {
     let counterItems = document.querySelectorAll('[data-fadeInDown-anim]');
     if (counterItems) {
 
-
         counterItems.forEach(item => {
 
-            let animation = anime({
-                targets: item,
-                opacity: ['0', '1'],
-                translateY: ['-100%', 0],
-                easing: 'easeInOutQuad',
-                autoplay: false,
-                duration: 1000,
-                delay: 300,
-            });
-
             window.addEventListener('load', () => {
                 scrollTrigger(item, 15, () => {
-                    setTimeout(() => { animation.play(); }, item.dataset.delay ? item.dataset.delay : 0);
-                })
-            })
-        })
-    }
-
-    let counterItems2 = document.querySelectorAll('.fadeIn');
-    if (counterItems2) {
-
-
-        counterItems2.forEach(item => {
-            window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
-                    setTimeout(() => { item.classList.add('_active') }, item.dataset.delay ? item.dataset.delay : 0);
+                    setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
         })
