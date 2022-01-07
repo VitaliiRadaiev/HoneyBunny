@@ -345,8 +345,11 @@
 
     &__title {
         margin-bottom: 11px;
+        position: relative;
+        top: -5px;
 
         @media (min-width: 768px) {
+            top: -8px;
             margin-bottom: 60px;
         }
     }

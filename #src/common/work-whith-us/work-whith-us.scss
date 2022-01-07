@@ -98,7 +98,9 @@
                 text-transform: uppercase;
                 max-width: 240px;
                 transition: all .3s ease;
+                margin-top: -2px;
                 @media (min-width: 992px) {
+                    margin-top: -3px;
                     font-size: 24px;
                 }
             }

@@ -3179,6 +3179,7 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin-top: -2px;
 }
 
 .work-whith-us__slider .swiper-slide .bottom {
@@ -3769,6 +3770,8 @@ textarea {
 
 .lower-works__title {
   margin-bottom: 11px;
+  position: relative;
+  top: -5px;
 }
 
 .lower-works__subtitle {
@@ -4699,6 +4702,7 @@ textarea {
   }
 
   .lower-works__title {
+    top: -8px;
     margin-bottom: 60px;
   }
 
@@ -4951,6 +4955,7 @@ textarea {
   }
 
   .work-whith-us__slider .swiper-slide .top {
+    margin-top: -3px;
     font-size: 24px;
   }
 
