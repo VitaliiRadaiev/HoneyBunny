@@ -52,7 +52,7 @@ function wrapWords(el) {
             });
 
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { animation.play(); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -67,7 +67,7 @@ function wrapWords(el) {
 
         counterItems.forEach(item => {
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active') }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -82,7 +82,7 @@ function wrapWords(el) {
 
         counterItems.forEach(item => {
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -97,7 +97,7 @@ function wrapWords(el) {
         counterItems.forEach(item => {
 
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -112,7 +112,7 @@ function wrapWords(el) {
         counterItems.forEach(item => {
 
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })

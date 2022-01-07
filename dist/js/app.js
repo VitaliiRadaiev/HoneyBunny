@@ -438,8 +438,6 @@ if(workWithUsSlider) {
 if (girls) {
 
     let dataSlider = new Swiper(girls.querySelector('.swiper-container'), {
-        slidesPerView: 1,
-        spaceBetween: 0,
         speed: 800,
         watchOverflow: true,
         watchSlidesVisibility: true,
@@ -449,11 +447,11 @@ if (girls) {
         },
         breakpoints: {
         	320: {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 0,
         	},
         	992: {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 40,
         	},
         },
@@ -917,7 +915,7 @@ function wrapWords(el) {
             });
 
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { animation.play(); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -932,7 +930,7 @@ function wrapWords(el) {
 
         counterItems.forEach(item => {
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active') }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -947,7 +945,7 @@ function wrapWords(el) {
 
         counterItems.forEach(item => {
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -962,7 +960,7 @@ function wrapWords(el) {
         counterItems.forEach(item => {
 
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })
@@ -977,7 +975,7 @@ function wrapWords(el) {
         counterItems.forEach(item => {
 
             window.addEventListener('load', () => {
-                scrollTrigger(item, 15, () => {
+                scrollTrigger(item, 7, () => {
                     setTimeout(() => { item.classList.add('_active'); }, item.dataset.delay ? item.dataset.delay : 0);
                 })
             })

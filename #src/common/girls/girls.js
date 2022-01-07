@@ -2,8 +2,6 @@ let girls = document.querySelector('.girls');
 if (girls) {
 
     let dataSlider = new Swiper(girls.querySelector('.swiper-container'), {
-        slidesPerView: 1,
-        spaceBetween: 0,
         speed: 800,
         watchOverflow: true,
         watchSlidesVisibility: true,
@@ -13,11 +11,11 @@ if (girls) {
         },
         breakpoints: {
         	320: {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 0,
         	},
         	992: {
-                slidesPerView: 'auto',
+                slidesPerView: 1,
                 spaceBetween: 40,
         	},
         },
